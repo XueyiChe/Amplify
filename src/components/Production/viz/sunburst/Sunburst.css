@@ -1,0 +1,224 @@
+.sunburst{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sunburst h1{
+    font-family: 'Lobster';
+    margin-left: 10px
+}
+
+input[type="radio"]+ label:before{
+    font-family: 'Cabin';
+}
+
+.sunburst form{
+    display: flex
+}
+.sunburst label{
+    font-family: 'Cabin';
+    margin-left: 10px
+}
+
+#sunburst{
+    display: flex
+}
+
+
+
+#main {
+    float: left;
+}
+
+#sidebar {
+    margin-left: 30px;
+    font-family: 'Cabin';
+    height:600px
+}
+
+#rank {
+    float: right;
+    width: 150px;
+    left: 200px;
+    right: 10px;
+}
+
+#sequence {
+    width: 600px;
+    height: 50px;
+    top: 30px;
+
+}
+
+#legend {
+    padding: 10px 0 0 3px;
+    width: 200px;
+    
+}
+
+#sequence text,
+#legend text {
+    font-weight: 600;
+    fill: #fff;
+}
+
+#chart {
+    width: 600px;
+    margin-left: 10px;
+    position: relative;
+}
+
+#stackedchart {
+    width: 750px;
+    position: relative;
+    margin: 30px;
+    top: 50px;
+}
+
+#chart path {
+    stroke: #fff;
+}
+
+#showNumber {
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+#explanation {
+    position: absolute;
+    top: 260px;
+    left: 230px;
+    width: 140px;
+    text-align: center;
+    color: #666;
+    z-index: -1;
+}
+
+#percentage {
+    font-size: 2.5em;
+}
+
+.bar--positive {
+    fill: steelblue;
+}
+
+.bar--negative {
+    fill: darkorange;
+}
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+#dashboard {
+    margin: 30px;
+}
+
+path {
+    stroke: #fff;
+}
+
+path:hover {
+    opacity: 0.9;
+}
+
+rect:hover {
+    fill: blue;
+}
+
+.axis {
+    font: 10px sans-serif;
+}
+
+.legend tr {
+    border-bottom: 1px solid grey;
+}
+
+.legend tr:first-child {
+    border-top: 1px solid grey;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.legend {
+    margin-bottom: 76px;
+    display: inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.legend td {
+    padding: 4px 5px;
+    vertical-align: bottom;
+}
+
+.legendjob,
+.legendPerc {
+    align: right;
+    width: 50px;
+}
+
+.chartExplanation {
+    width: 750px;
+    font-family: verdana;
+    font-size: 16px;
+    margin: 30px;
+}
+
+.summary {
+    width: 750px;
+    font-family: verdana;
+    font-size: 14px;
+    margin: 30px;
+}
+
+rect.bordered {
+    stroke: #E6E6E6;
+    stroke-width: 2px;
+}
+
+text.axis {
+    fill: #000;
+}
+
+.bar {
+    fill: steelblue;
+}
+
+.x.axis path {
+    display: none;
+}
+
+.legend line {
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.bar--positive {
+    fill: steelblue;
+}
+
+.bar--negative {
+    fill: darkorange;
+}
+
+footer {
+    text-align: center;
+}

@@ -6,7 +6,6 @@ import Button from '../../UI/Button/Button';
 const checkoutSummary = (props) => {
 	return (
 		<div className={classes.checkoutSummary}>
-			<h1>Hope You enjoy the burger</h1>
 			<div style={{ width: '100%', margin: 'auto' }}>
 				<Burger ingredient={props.ingredient} />
 			</div>
@@ -14,7 +13,7 @@ const checkoutSummary = (props) => {
 				Cancel
 			</Button>
 			<Button btnType="Success" clicked={props.checkoutContinue}>
-				Continue
+				Submit
 			</Button>
 		</div>
 	);

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Sequences sunburst</title>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" type="text/css" href="sequences.css" />
+
+</head>
+
+
+<body>
+    <!-- header -->
+    <div class="chartExplanation">
+        <h1>Silicon valley diversity</h1>
+        <br>
+        <h2>Sunburst chart</h2>
+        <p class="text-small">The sunburst chart demonstrate the diversity of silicon valley by catagory of gender, race and job catagory.<br> User can switch the first layer by clicking the radio button.<br> User can put mouse over the partition to see the exact propotion of people with specific gender, race, catagory and company.</p>
+    </div>
+
+    <form>
+        <label><input type="radio" name="start" value="gender"> Gender</label>
+        <label><input type="radio" name="start" value="race" checked> Race</label>
+        <label><input type="radio" name="start" value="jobCatagory" checked> Job catagory</label>
+    </form>
+    <div id="sunburst">
+        <div id="main">
+            <div id="sequence"></div>
+            <div id="chart">
+                <div id="explanation" style="visibility: hidden;">
+                    <span id="percentage"></span><br/> of total
+                </div>
+            </div>
+        </div>
+        <div id="sidebar">
+            <input type="checkbox" id="togglelegend"> Legend<br/>
+            <div id="legend" style="visibility: hidden;">
+            </div>
+        </div>
+    </div>
+    <div class="summary">
+        As the sunburst chart demonstrated, overall, silicon valley is domainant by male and white.<br> Asian is the second dominant race in silicon valley, the propotion of asian in silicon valley far exceed the propotion of asian in American.
+    </div>
+
+    <div class="chartExplanation">
+        <h2>Gender chart</h2>
+        The gender chart show the number and percentage of gender distribution in each company.The positive part show the number/percentage of female employee in the company while the negative part show the number/percentage of male employee.<br> User can move the mouse on to see the exact number of each part.
+
+    </div>
+    <div id="genderchart">
+        <form>
+            <label><input type="radio" name="selectGender" value="percentage"> Percentage</label>
+            <label><input type="radio" name="selectGender" value="number" checked> Number</label>
+        </form>
+
+        <div id="showNumber" style="visibility: hidden;">number:&nbsp;
+            <span id="number"></span>
+        </div>
+        <div id="gender"></div>
+
+    </div>
+    <div class="summary">
+        As the gender chart demonstrated, the big company in silicon valley are male-dominant with large propotion of male employees.<br> In general, 23 and me has the best gender diversity with 50.17% female and 49.83% male.<br> For company with more than 5000 employee, Intuit has the best gender diversity with 42.94% female and 57.06% male.
+    </div>
+
+    <div id='racebar'>
+        <div class="chartExplanation">
+            <h2>Race chart</h2>
+            The race chart show the number of race distribution in each company.The stacked bar chart show the number/percentage of each race employee in the company.<br>
+
+
+        </div>
+        <form>
+            <label><input type="radio" name="mode" value="bypercent" checked> Percent</label>
+            <label><input type="radio" name="mode" value="bycount"> Number</label>
+        </form>
+
+        <div id="stackedchart"></div>
+        <div class="summary">
+            As the race chart demonstrated, the big company in silicon valley are white-dominant with large propotion of white employees.<br> In general, Nvidia has the best race diversity with mixed race employees.<br> HP Inc. has the worst race diversity.
+        </div>
+    </div>
+
+
+    <div class="chartExplanation">
+        <h2>Dashboard</h2>
+        The dashboard includes two charts. The left bar chart show the overall race distribution in Silicon Valley, the right pie chart shows the distribution of job category.<br> User can move the mouse over the bar chart, the pie chart would switch to the job category distribution of the specific race as the user move the mouse on. The number and percentage of job category of the specific race would demonstrate in the table below.<br> Moreover, user can also move the mouse over the pie chart, the bar chart would switch to the race distribution of the specific job category as the user move the mouse on.
+
+
+    </div>
+
+    <div id='dashboard'>
+    </div>
+    <div class="summary">
+        As the dashboard demonstrated, asian, the second biggest race are mainly professionals, which only a litter less than white.<br> However, the managers including the mid official and senior official manager are mostly white.
+    </div>
+
+    <footer>dataset origin from: https://www.kaggle.com/rtatman/silicon-valley-diversity-data<br> Author: Xueyi Che 28537416<br> Monash university
+    </footer>
+
+
+    <script type="text/javascript" src="sequences.js"></script>
+    <script type="text/javascript" src="barchart.js"></script>
+    <script type="text/javascript" src="dashboard.js"></script>
+    <script type="text/javascript" src="companyrace.js"></script>
+    <script type="text/javascript">
+        // Hack to make this example display correctly in an iframe on bl.ocks.org
+        d3.select(self.frameElement).style("height", "700px");
+    </script>
+</body>
+
+</html>

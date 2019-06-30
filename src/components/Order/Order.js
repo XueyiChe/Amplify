@@ -10,26 +10,38 @@ const order = (props) => {
 	}
 
 	const imgredientOutput = ingredient.map((ig) => {
-		return (
-			<span
-				style={{
-					textTransform: 'capitalize',
-					display: 'inline-block',
-					margin: '0 8px',
-					border: '1px solid #ccc',
-					padding: '5px'
-				}}
-				key={ig.name}
-			>
-				{ig.name} ({ig.amount})
-			</span>
-		);
+		if (ig.amount !== 0) {
+			const name = ig.name;
+			const newName = name.replace('_', '-');
+			return (
+				<span
+					style={{
+						textTransform: 'capitalize',
+						display: 'inline-block',
+						margin: '0 8px',
+						border: '1px solid #ccc',
+						padding: '5px'
+					}}
+				>
+					{newName} ({ig.amount})
+				</span>
+			);
+		}
 	});
+
+	const date = new Date(props.date);
+	const year = date.getFullYear();
+	const months = [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec' ];
+	const month = months[date.getMonth()];
+	const date1 = date.getDate();
+	const submitDate = month + ' ' + date1 + ' ' + year;
+	console.log(date);
 	return (
 		<div className={classes.Order}>
-			<p>Ingredients: {imgredientOutput}</p>
+			<h5>Date: {submitDate}</h5>
+			<p>Workout: {imgredientOutput}</p>
 			<p>
-				Price :<strong>{props.price}</strong>
+				Total Time :<strong>{props.price}</strong>
 			</p>
 		</div>
 	);

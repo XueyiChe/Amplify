@@ -1,0 +1,50 @@
+#stackedchart {
+    width: 750px;
+    position: relative;
+    margin: 30px;
+    top: 50px;
+    height: 500px
+}
+
+#chart path {
+    stroke: #fff;
+}
+
+#showNumber {
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+#explanation {
+    position: absolute;
+    top: 260px;
+    left: 305px;
+    width: 140px;
+    text-align: center;
+    color: #666;
+    z-index: -1;
+}
+
+#percentage {
+    font-size: 2.5em;
+}
+
+.bar--positive {
+    fill: steelblue;
+}
+
+.bar--negative {
+    fill: darkorange;
+}
+
+.axis text {
+    font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}

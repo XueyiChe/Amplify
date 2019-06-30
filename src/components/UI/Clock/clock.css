@@ -1,0 +1,15 @@
+.clock {
+	height: 40px;
+	width: 40px;
+	background-image: url("/asset/clock.png");
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.time {
+	padding: 8px 6px;
+}
+
+.time p {
+	font-family: 'Cabin';
+}

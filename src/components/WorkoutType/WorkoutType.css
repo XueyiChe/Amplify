@@ -1,0 +1,8 @@
+.WorkoutType {
+	position: absolute;
+	bottom: 50%;
+	left: 0;
+	right: 0;
+	font-family: 'Cabin';
+	margin: auto;
+}

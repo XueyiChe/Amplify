@@ -1,6 +1,7 @@
 import React from 'react';
 import Aux from '../../../hoc/Auxiliary';
 import Button from '../../UI/Button/Button';
+import { numberToTime } from '../../../utility/utility';
 
 class OrderSummary extends React.Component {
 	componentWillUpdate() {
@@ -8,19 +9,23 @@ class OrderSummary extends React.Component {
 	}
 	render() {
 		const ingredientSummary = Object.keys(this.props.ingredients).map((igKey) => {
-			return (
-				<li key={igKey}>
-					<span style={{ textTransform: 'capitalize' }}>{igKey}</span>: {this.props.ingredients[igKey]}
-				</li>
-			);
+			if (this.props.ingredients[igKey] !== 0) {
+				return (
+					<li key={igKey}>
+						<span style={{ textTransform: 'capitalize' }}>{igKey}</span>:{' '}
+						{numberToTime(this.props.ingredients[igKey])}
+					</li>
+				);
+			}
 		});
+
+		const time = numberToTime(this.props.price);
 		return (
 			<Aux>
-				<h3>Your order</h3>
-				<p>A deliciou burger with the following ingredients:</p>
+				<h3>Your workout</h3>
+				<p>Today's workout include:</p>
 				<ul>{ingredientSummary}</ul>
-				<p>Total Price: {this.props.price.toFixed(2)}</p>
-				<p>Continue to checkout</p>
+				<p>Total time: {time}</p>
 				<Button btnType="Danger" clicked={this.props.purchaseCancelled}>
 					Cancel
 				</Button>

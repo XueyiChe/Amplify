@@ -1,0 +1,71 @@
+.homePage {
+	text-align: center;
+	/* margin: 56px 0 0 0; */
+}
+.displayflex {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+nav {
+	background-color: transparent;
+	margin-top: 0px;
+	font-family: 'Cabin';
+}
+
+.period {
+	padding: 30px 0;
+}
+
+.fas {
+	color: #b2abbf;
+}
+
+.fa-1x {
+	color: #a7bed3;
+}
+
+.content {
+	background-color: #f7e7ce;
+	padding: 30px 0;
+}
+.content h2 {
+	font-family: 'Lobster';
+}
+
+.content p {
+	font-family: 'Cabin';
+	margin-top: 20px;
+	color: #615f5f;
+}
+
+.introduction {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.introductionWords {
+	margin-left: 50px;
+}
+
+/* .introduction img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+} */
+
+.spandisplayflex {
+	display: flex;
+	align-items: center;
+}
+
+.programmerSkills p {
+	margin-top: 10px;
+}
+
+.textLeft {
+	margin-left: 20px;
+	margin-right: 20px;
+}
