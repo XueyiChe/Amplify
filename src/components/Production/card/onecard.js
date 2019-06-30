@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './onecard.css';
+import { Link } from 'react-router-dom';
 
 const onecard = (props) => {
 	const style = {
@@ -9,7 +10,7 @@ const onecard = (props) => {
 		zIndex: '100'
 	};
 	return (
-		<a href={props.link}>
+		<Link to={props.link}>
 			<div className={classes.container}>
 				<div className={classes.folder}>
 					<div className={classes.project} style={style}>
@@ -20,7 +21,7 @@ const onecard = (props) => {
 					</div>
 				</div>
 			</div>
-		</a>
+		</Link>
 	);
 };
 
