@@ -17,14 +17,14 @@ export default class Production extends React.Component {
 								link="https://secondinning.online"
 								name="Second Inning"
 								left="60px"
-								image="asset/secondinning.JPG"
+								image="asset/secondinning.jpg"
 							/>
 						</div>
 						<div className={classes.folders}>
-							<OneCard link="/gym" name="Gym Recorder" left="40px" image="asset/gymapp.JPG" />
+							<OneCard link="/gym" name="Gym Recorder" left="40px" image="asset/gymapp.jpg" />
 						</div>
 						<div className={classes.folders}>
-							<OneCard link="/visulisation" name="Data Visualisation" left="40px" image="asset/viz.JPG" />
+							<OneCard link="/visulisation" name="Data Visualisation" left="40px" image="asset/viz.jpg" />
 						</div>
 					</div>
 				</div>
