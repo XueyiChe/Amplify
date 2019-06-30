@@ -5,16 +5,23 @@ import withErrorHandler from '../../hoc/withErrorhandler/withErrorHandler';
 import { connect } from 'react-redux';
 import * as ActionCreator from '../../store/action/index';
 import Spinner from '../../components/UI/Spinner/Spinner';
+import styles from './Orders.css';
+import Button from '../../components/UI/Button/Button';
+import { withRouter } from 'react-router-dom';
 
 class Orders extends React.Component {
-	state = {
-		order: [],
-		loading: true
-	};
 	componentDidMount() {
 		this.props.viewHistory();
 	}
+
+	backtoHomepage = () => {
+		this.props.history.push({
+			pathname: '/gym'
+			// search: '?' + queryString
+		});
+	};
 	render() {
+		console.log(this.props);
 		let orders = <Spinner />;
 		if (!this.props.loading) {
 			orders = this.props.orders.map((i) => (
@@ -22,7 +29,16 @@ class Orders extends React.Component {
 			));
 			console.log(this.props.orders);
 		}
-		return <div>{orders} </div>;
+		return (
+			<div className={styles.Orders}>
+				{orders}
+				<div className={styles.center}>
+					<Button btnType="Success" clicked={this.backtoHomepage}>
+						Back
+					</Button>
+				</div>
+			</div>
+		);
 	}
 }
 

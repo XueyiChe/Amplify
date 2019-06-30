@@ -59,6 +59,7 @@ nav {
 .spandisplayflex {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 }
 
 .programmerSkills p {
@@ -68,4 +69,22 @@ nav {
 .textLeft {
 	margin-left: 20px;
 	margin-right: 20px;
+}
+
+@media (max-width: 500px) {
+	img {
+		display: none;
+	}
+
+	.content {
+		padding: 30px 20px;
+	}
+
+	.displayflex {
+		flex-direction: column;
+	}
+
+	.introductionWords {
+		margin: 0px;
+	}
 }

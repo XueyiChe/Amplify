@@ -1,12 +1,12 @@
 .Burger {
 	width: 100%;
-	margin: auto;
 	height: 50%;
 	/* what should happen if content overflows an element's box.  */
 	text-align: center;
 	font-weight: bold;
 	font-size: 1.2rem;
 	font-family: 'Cabin';
+	margin: 50px auto;
 }
 
 .Burger p {

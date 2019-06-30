@@ -34,10 +34,15 @@ const buildControls = (props) => (
 				);
 			}
 		})}
+		<div className={classes.displayFlex}>
+			<button className={classes.historyButton} onClick={props.history}>
+				History
+			</button>
 
-		<button className={classes.OrderButton} disabled={!props.purchaseable} onClick={props.ordered}>
-			Burn!
-		</button>
+			<button className={classes.OrderButton} disabled={!props.purchaseable} onClick={props.ordered}>
+				Burn!
+			</button>
+		</div>
 	</div>
 );
 

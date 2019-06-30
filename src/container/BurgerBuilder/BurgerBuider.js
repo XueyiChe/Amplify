@@ -48,6 +48,13 @@ class BurgerBuider extends Component {
 			WorkoutType: workout
 		});
 	};
+
+	historyHandler = () => {
+		this.props.history.push({
+			pathname: '/history'
+			// search: '?' + queryString
+		});
+	};
 	componentDidMount() {}
 
 	render() {
@@ -88,23 +95,22 @@ class BurgerBuider extends Component {
 
 		return (
 			<div>
-				<Layout>
-					<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHander}>
-						{orderSummary}
-					</Modal>
+				<Modal show={this.state.purchasing} modalClosed={this.purchaseCancelHander}>
+					{orderSummary}
+				</Modal>
 
-					{burger}
-					<WorkoutType ifchanged={this.WorkoutTypeChangeHandler} />
-					<BuildControl
-						WorkoutType={this.state.WorkoutType}
-						ingredientAdded={this.props.onIngredientAdded}
-						ingredientRemoved={this.props.onIngredientRemoved}
-						disableInfo={disableInfo}
-						totalPrice={totalTime}
-						purchaseable={this.updatePurchase(this.props.price)}
-						ordered={this.purchaseHandler}
-					/>
-				</Layout>
+				{burger}
+				<WorkoutType ifchanged={this.WorkoutTypeChangeHandler} />
+				<BuildControl
+					WorkoutType={this.state.WorkoutType}
+					ingredientAdded={this.props.onIngredientAdded}
+					ingredientRemoved={this.props.onIngredientRemoved}
+					disableInfo={disableInfo}
+					totalPrice={totalTime}
+					purchaseable={this.updatePurchase(this.props.price)}
+					ordered={this.purchaseHandler}
+					history={this.historyHandler}
+				/>
 			</div>
 		);
 	}

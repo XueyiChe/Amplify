@@ -8,7 +8,7 @@ const introduction = () => {
 	return (
 		<div className={classes.content}>
 			<div className={[ classes.period, classes.whoamI ].join()}>
-				<div className={classes.displayflex}>
+				<div className={classes.spandisplayflex}>
 					<i className="fas fa-female fa-3x" />
 					<h2 style={marginLeft}>Who Am I?</h2>
 				</div>
@@ -23,7 +23,7 @@ const introduction = () => {
 				</div>
 			</div>
 			<div className={[ classes.period, classes.skills ].join()}>
-				<div className={classes.displayflex}>
+				<div className={classes.spandisplayflex}>
 					<i class="fas fa-file-code fa-2x" />
 					<h2 style={marginLeft}>What I Can Do?</h2>
 				</div>
@@ -52,7 +52,7 @@ const introduction = () => {
 				</div>
 			</div>
 			<div className={[ classes.period, classes.education ].join()}>
-				<div className={classes.displayflex}>
+				<div className={classes.spandisplayflex}>
 					<i class="fas fa-university fa-2x" />
 					<h2 style={marginLeft}>My Education Background</h2>
 				</div>
@@ -88,7 +88,7 @@ const introduction = () => {
 			</div>
 
 			<div className={[ classes.period, classes.work ].join()}>
-				<div className={classes.displayflex}>
+				<div className={classes.spandisplayflex}>
 					<i class="fas fa-briefcase fa-2x" />
 					<h2 style={marginLeft}>My Work Experience</h2>
 				</div>

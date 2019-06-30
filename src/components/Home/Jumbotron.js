@@ -15,7 +15,7 @@ const jumbotron = () => {
            <Image id = 'history' src = 'asset/history.png'></Image>
            <Image id = 'Ningbo' src = 'asset/Ningbo.png'></Image>
            <Image id = 'gym' src = 'asset/gym.png'></Image> */}
-			<Image id={classes.feminism} src="asset/feminism.png" width="150px" />
+			<Image id={classes.feminism} src="asset/feminism.png" width="120px" />
 			<div id={classes.girls}>
 				<h2 style={fontSizeBig}> GIRLS </h2>
 				<h2> CAN DO </h2>

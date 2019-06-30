@@ -86,3 +86,33 @@
 a {
 	color: black;
 }
+
+@media (max-width: 500px) {
+	.folder {
+		width: 238px;
+		height: 98px;
+		left: 120px;
+		right: 120px;
+	}
+	.folder::before {
+		width: 56px;
+		height: 14px;
+		top: -14px;
+	}
+	.folder::after {
+		width: 238px;
+		height: 147px;
+	}
+	.folder_inside {
+		width: 224px;
+		height: 140px;
+	}
+	.folder_inside::before {
+		width: 140px;
+		height: 203px;
+	}
+
+	h2 {
+		font-size: 130%;
+	}
+}

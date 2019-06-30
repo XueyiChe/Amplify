@@ -9,8 +9,6 @@ export default class home extends React.Component {
 	render() {
 		return (
 			<div className={classes.homePage}>
-				<Toolbar />
-				<SideDrawer />
 				<Jumbotron />
 				<Introduction />
 			</div>

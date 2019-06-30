@@ -1,9 +1,11 @@
 .jumbotron {
 	background-color: #eba2ae !important;
-	padding-top: 20px;
 	justify-content: center;
 	margin-bottom: 0px;
 	border-radius: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
 }
 @-webkit-keyframes rubberBand {
 	from {
@@ -103,7 +105,7 @@ jumbotron p {
 
 #feminism {
 	position: absolute;
-	top: 150px;
+	top: 140px;
 	right: 100px;
 	-webkit-animation-name: fadeIn;
 	animation-name: fadeIn;

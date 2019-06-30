@@ -10,7 +10,7 @@ const onecard = (props) => {
 		zIndex: '100'
 	};
 	return (
-		<Link to={props.link}>
+		<a href={props.link}>
 			<div className={classes.container}>
 				<div className={classes.folder}>
 					<div className={classes.project} style={style}>
@@ -21,7 +21,7 @@ const onecard = (props) => {
 					</div>
 				</div>
 			</div>
-		</Link>
+		</a>
 	);
 };
 
