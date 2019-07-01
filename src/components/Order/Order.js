@@ -1,15 +1,15 @@
 import React from 'react';
 import classes from './Order.css';
 const order = (props) => {
-	const ingredient = [];
-	for (let ingredientName in props.ingredient) {
-		ingredient.push({
-			name: ingredientName,
-			amount: props.ingredient[ingredientName]
+	const sport = [];
+	for (let sportName in props.sport) {
+		sport.push({
+			name: sportName,
+			amount: props.sport[sportName]
 		});
 	}
 
-	const imgredientOutput = ingredient.map((ig) => {
+	const imgredientOutput = sport.map((ig) => {
 		if (ig.amount !== 0) {
 			const name = ig.name;
 			const newName = name.replace('_', '-');

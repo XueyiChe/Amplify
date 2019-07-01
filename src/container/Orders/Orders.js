@@ -24,9 +24,7 @@ class Orders extends React.Component {
 		console.log(this.props);
 		let orders = <Spinner />;
 		if (!this.props.loading) {
-			orders = this.props.orders.map((i) => (
-				<Order key={i.date} date={i.date} ingredient={i.ingredient} price={i.price} />
-			));
+			orders = this.props.orders.map((i) => <Order key={i.date} date={i.date} sport={i.sport} price={i.price} />);
 			console.log(this.props.orders);
 		}
 		return (

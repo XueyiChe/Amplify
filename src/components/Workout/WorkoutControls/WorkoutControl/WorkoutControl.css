@@ -1,0 +1,62 @@
+.WorkoutControl {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 5px 0;
+}
+.WorkoutControl p {
+	font-family: 'Cabin';
+}
+
+.WorkoutControl button {
+	display: block;
+	font: inherit;
+	padding: 5px;
+	margin: 0 5px;
+	width: 60px;
+	cursor: pointer;
+	outline: none;
+}
+
+.WorkoutControl button:disabled {
+	background-color: #b2abbf;
+
+	color: #ccc;
+	cursor: default;
+}
+
+.WorkoutControl button:hover:disabled {
+	background-color: #b2abbf;
+	color: #ccc;
+	cursor: not-allowed;
+}
+
+.Label {
+	font-weight: bold;
+	width: 120px;
+	font-family: 'Cabin';
+	padding: 10px;
+}
+
+.WorkoutControl .Less {
+	background-color: #752ef7;
+	color: white;
+}
+
+.WorkoutControl .More {
+	background-color: #752ef7;
+	color: white;
+	margin-left: 20px;
+}
+
+.WorkoutControl .Less:hover,
+.WorkoutControl .Less:active {
+	background-color: #b65af6;
+	color: white;
+}
+
+.WorkoutControl .More:hover,
+.WorkoutControl .More:active {
+	background-color: #b65af6;
+	color: white;
+}

@@ -1,5 +1,5 @@
-export const ADD_INGREDIENT = 'ADD_INGREDIENT';
-export const REMOVE_INGREDIENT = 'REMOVE_INGREDIENT';
+export const ADD_sport = 'ADD_sport';
+export const REMOVE_sport = 'REMOVE_sport';
 export const UPDATE_PRICE = 'UPDATE_PRICE';
 
 export const SUBMIT_WORKOUT_SUCCESS = 'SUBMIT_WORKOUT_SUCCESS';

@@ -1,0 +1,69 @@
+.Workout {
+	width: 100%;
+	height: 50%;
+	/* what should happen if content overflows an element's box.  */
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.2rem;
+	font-family: 'Cabin';
+	margin: 50px auto;
+}
+
+.Workout p {
+	margin: auto;
+}
+
+.Workout table {
+	margin: auto;
+	width: 60%;
+}
+
+.workoutDetail {
+	-webkit-animation-name: fadeIn;
+	animation-name: fadeIn;
+	animation-duration: 1s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+	overflow: scroll;
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+	.Workout {
+		width: 700px;
+		height: 600px;
+	}
+}
+
+@media (min-width: 500px) and (min-height: 401px) {
+	.Workout {
+		width: 450px;
+		height: 400px;
+	}
+}
+
+@media (min-width: 500px) and (min-height: 400px) {
+	.Workout {
+		width: 350px;
+		height: 300px;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

@@ -14,7 +14,7 @@ class Checkout extends React.Component {
 		const date = new Date();
 		// this.props.history.replace('/checkout/contact-data');
 		const formData = {
-			ingredient: this.props.ing,
+			sport: this.props.ing,
 			price: this.props.price,
 			date: date
 		};
@@ -23,19 +23,19 @@ class Checkout extends React.Component {
 
 	// componentWillMount() {
 	// 	const query = new URLSearchParams(this.props.location.search);
-	// 	const ingredients = {};
+	// 	const sports = {};
 	// 	let price = 0;
 	// 	for (let param of query.entries()) {
 	// 		if (param[0] === 'price') {
 	// 			price = param[1];
 	// 		} else {
-	// 			ingredients[param[0]] = +param[1];
+	// 			sports[param[0]] = +param[1];
 	// 		}
 	// 	}
 
-	// 	console.log(ingredients);
+	// 	console.log(sports);
 	// 	this.setState({
-	// 		ingredient: ingredients,
+	// 		sport: sports,
 	// 		totalPrice: price
 	// 	});
 	// }
@@ -48,7 +48,7 @@ class Checkout extends React.Component {
 				<div>
 					{submitRedirect}
 					<CheckoutSummary
-						ingredient={this.props.ing}
+						sport={this.props.ing}
 						checkoutCancel={this.checkoutCancelHandler}
 						checkoutContinue={this.checkoutContinueHandler}
 					/>
@@ -60,7 +60,7 @@ class Checkout extends React.Component {
 				{summary}
 				{/* <Route
 					path={this.props.match.path + '/contact-data'}
-					// render={() => <ContactData ingredient={this.props.ing} price={this.props.price} {...this.props} />}
+					// render={() => <ContactData sport={this.props.ing} price={this.props.price} {...this.props} />}
 					component={ContactData}
 				/> */}
 			</div>
@@ -70,7 +70,7 @@ class Checkout extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		ing: state.workout.ingredient,
+		ing: state.workout.sport,
 		price: state.workout.totalPrice,
 		submitted: state.submit.submitted,
 		loading: state.submit.loading

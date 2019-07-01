@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Workout.css';
+import classes from './WorkoutRecord.css';
 
 const Workout = (props) => {
 	return (

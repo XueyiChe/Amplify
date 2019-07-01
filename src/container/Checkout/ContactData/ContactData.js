@@ -22,7 +22,7 @@ class ContactData extends React.Component {
 			loading: true
 		});
 		const order = {
-			ingredient: this.props.ing,
+			sport: this.props.ing,
 			totalPrice: this.props.price,
 			address: {
 				state: 'VIC',
@@ -70,7 +70,7 @@ class ContactData extends React.Component {
 
 const mapStateToProps = (state) => {
 	return {
-		ing: state.ingredient,
+		ing: state.sport,
 		price: state.totalPrice
 	};
 };

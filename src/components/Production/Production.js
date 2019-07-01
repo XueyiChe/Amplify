@@ -24,7 +24,10 @@ export default class Production extends React.Component {
 							<OneCard link="/gym" name="Gym Recorder" left="40px" image="asset/gymapp.jpg" />
 						</div>
 						<div className={classes.folders}>
-							<OneCard link="/visulisation" name="Data Visualisation" left="40px" image="asset/viz.jpg" />
+							<OneCard link="" name="Data Visualisation" left="40px" image="asset/viz.jpg" />
+						</div>
+						<div className={classes.folders}>
+							<OneCard link="/timer" name="Workout Timer" left="40px" image="asset/timer.jpg" />
 						</div>
 					</div>
 				</div>

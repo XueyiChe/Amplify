@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Aux from '../../hoc/Auxiliary';
-import Burger from '../../components/Burger/BurgerIngredient/Burger';
-import BuildControl from '../../components/Burger/BuildControls/BuildControls';
+import Workout from '../../components/Workout/WorkoutSport/Workout';
+import WorkoutControl from '../../components/Workout/WorkoutControls/WorkoutControls';
 import Modal from '../../components/UI/Modal/Modal';
-import OrderSummary from '../../components/Burger/OrderSummary/OrderSummary';
+import OrderSummary from '../../components/Workout/OrderSummary/OrderSummary';
 import axios from '../../axios-orders';
 import Spinner from '../../components/UI/Spinner/Spinner';
 import withErrorHandler from '../../hoc/withErrorhandler/withErrorHandler';
 import * as actionType from '../../store/action/actions';
-import Layout from '../../container/Layout/Layout';
 import WorkoutType from '../../components/WorkoutType/WorkoutType';
 
-class BurgerBuider extends Component {
+class WorkoutBuider extends Component {
 	state = {
 		//purchaseable: false,
 		purchasing: false,
@@ -70,7 +68,7 @@ class BurgerBuider extends Component {
 		if (!this.state.loading && this.props.ing) {
 			orderSummary = (
 				<OrderSummary
-					ingredients={this.props.ing}
+					sports={this.props.ing}
 					purchaseCancelled={this.purchaseCancelHandler}
 					purchaseContinued={this.purchaseContinueHandler}
 					price={this.props.price}
@@ -78,10 +76,10 @@ class BurgerBuider extends Component {
 			);
 		}
 
-		let burger = this.state.error ? <p>Ingredients cannot be loaded!</p> : <Spinner />;
+		let workout = this.state.error ? <p>sports cannot be loaded!</p> : <Spinner />;
 
 		if (this.props.ing) {
-			burger = <Burger ingredient={this.props.ing} totalPrice={this.props.price} />;
+			workout = <Workout sport={this.props.ing} totalPrice={this.props.price} />;
 		}
 		let totalTime = null;
 		if (Number.isInteger(this.props.price)) {
@@ -99,12 +97,12 @@ class BurgerBuider extends Component {
 					{orderSummary}
 				</Modal>
 
-				{burger}
+				{workout}
 				<WorkoutType ifchanged={this.WorkoutTypeChangeHandler} />
-				<BuildControl
+				<WorkoutControl
 					WorkoutType={this.state.WorkoutType}
-					ingredientAdded={this.props.onIngredientAdded}
-					ingredientRemoved={this.props.onIngredientRemoved}
+					sportAdded={this.props.onsportAdded}
+					sportRemoved={this.props.onsportRemoved}
 					disableInfo={disableInfo}
 					totalPrice={totalTime}
 					purchaseable={this.updatePurchase(this.props.price)}
@@ -118,16 +116,16 @@ class BurgerBuider extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		ing: state.workout.ingredient,
+		ing: state.workout.sport,
 		price: state.workout.totalPrice
 	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onIngredientAdded: (ingName) => dispatch({ type: actionType.ADD_INGREDIENT, ingredientName: ingName }),
-		onIngredientRemoved: (ingName) => dispatch({ type: actionType.REMOVE_INGREDIENT, ingredientName: ingName })
+		onsportAdded: (ingName) => dispatch({ type: actionType.ADD_sport, sportName: ingName }),
+		onsportRemoved: (ingName) => dispatch({ type: actionType.REMOVE_sport, sportName: ingName })
 	};
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(BurgerBuider, axios));
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(WorkoutBuider, axios));

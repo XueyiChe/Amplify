@@ -1,7 +1,7 @@
 import * as actionType from '../action/actions';
 
 const initialState = {
-	ingredient: {
+	sport: {
 		row: 0,
 		elliptical: 0,
 		cycling: 0,
@@ -31,25 +31,23 @@ const INGREDENT_PRICES = {
 
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
-		case actionType.ADD_INGREDIENT:
+		case actionType.ADD_sport:
 			return {
 				...state,
-				ingredient: {
-					...state.ingredient,
-					[action.ingredientName]:
-						state.ingredient[action.ingredientName] + INGREDENT_PRICES[action.ingredientName]
+				sport: {
+					...state.sport,
+					[action.sportName]: state.sport[action.sportName] + INGREDENT_PRICES[action.sportName]
 				},
-				totalPrice: state.totalPrice + INGREDENT_PRICES[action.ingredientName]
+				totalPrice: state.totalPrice + INGREDENT_PRICES[action.sportName]
 			};
-		case actionType.REMOVE_INGREDIENT:
+		case actionType.REMOVE_sport:
 			return {
 				...state,
-				ingredient: {
-					...state.ingredient,
-					[action.ingredientName]:
-						state.ingredient[action.ingredientName] - INGREDENT_PRICES[action.ingredientName]
+				sport: {
+					...state.sport,
+					[action.sportName]: state.sport[action.sportName] - INGREDENT_PRICES[action.sportName]
 				},
-				totalPrice: state.totalPrice - INGREDENT_PRICES[action.ingredientName]
+				totalPrice: state.totalPrice - INGREDENT_PRICES[action.sportName]
 			};
 		default:
 			return state;
