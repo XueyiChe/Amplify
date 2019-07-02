@@ -2,20 +2,7 @@
 	margin: 100px 0 0 0;
 }
 
-.folders {
-	width: 600px;
-	height: 400px;
-	margin: auto;
-	padding: 8px;
-}
-
 .displayflex {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-@media (max-width: 500px) {
-	.folders {
-		height: 280px;
-	}
 }

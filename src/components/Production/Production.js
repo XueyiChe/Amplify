@@ -12,23 +12,15 @@ export default class Production extends React.Component {
 			<Layout>
 				<div className={classes.productions}>
 					<div className={classes.displayflex}>
-						<div className={classes.folders}>
-							<OneCard
-								link="https://secondinning.online"
-								name="Second Inning"
-								left="60px"
-								image="asset/secondinning.jpg"
-							/>
-						</div>
-						<div className={classes.folders}>
-							<OneCard link="/gym" name="Gym Recorder" left="40px" image="asset/gymapp.jpg" />
-						</div>
-						<div className={classes.folders}>
-							<OneCard link="" name="Data Visualisation" left="40px" image="asset/viz.jpg" />
-						</div>
-						<div className={classes.folders}>
-							<OneCard link="/timer" name="Workout Timer" left="40px" image="asset/timer.jpg" />
-						</div>
+						<OneCard
+							link="https://secondinning.online"
+							name="Second Inning"
+							left="220px"
+							image="asset/secondinning.jpg"
+						/>
+						<OneCard link="/gym" name="Gym Recorder" left="220px" image="asset/gymapp.jpg" />
+						<OneCard link="" name="Data Visualisation" left="200px" image="asset/viz.jpg" />
+						<OneCard link="/timer" name="Workout Timer" left="220px" image="asset/timer.jpg" />
 					</div>
 				</div>
 			</Layout>

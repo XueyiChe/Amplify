@@ -1,6 +1,14 @@
 .container {
 	margin: auto;
 }
+
+.folders {
+	width: 600px;
+	height: 400px;
+	margin: auto;
+	padding: 8px;
+	justify-content: center;
+}
 .folder {
 	-webkit-perspective: 500px;
 	perspective: 500px;
@@ -114,6 +122,10 @@ h2 {
 	.folder_inside::before {
 		width: 140px;
 		height: 203px;
+	}
+
+	.folders {
+		height: 280px;
 	}
 
 	h2 {
